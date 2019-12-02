@@ -12,6 +12,9 @@
     <style> div.text1 {
         font-size: 20px;
     }
+    img#sorry {
+        display: none;
+    }
 </style><text1 style="text-align:center"><div.text1 style="color:whitesmoke"><div class="text1">Brennan and Matthew Present SORRY!</div></div>
 </divtext>
 <!--Background and Header 2-->
@@ -22,19 +25,21 @@
     </head>
     
     <body>
-<!--Weird Blue Border-->
-    <style>
-    #canvas{border:5px solid blue}
-    </style>
 
 
 <div style="text-align:center">
-<canvas id="canvas" width="850" height="850"></canvas>
+<canvas id="canvas" width="699" height="699" style="border:5px solid blue;"></canvas>
 </div>
 
+<img id="sorry" src="SorryBoard.png">
+
 <script>
-
-
+    window.onload=function(){
+        var canvas=document.getElementById("canvas");
+        var context=canvas.getContext("2d");
+        var image=document.getElementById("sorry");
+        context.drawImage(image, 0, 0);
+    };
 
 </script>
 
