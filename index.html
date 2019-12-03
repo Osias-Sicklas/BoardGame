@@ -19,6 +19,9 @@
     img#sorry{
         display: none;
     }
+    img#Sphirby{
+        display: none;
+    }
     </style>
     <text1 style="text-align:center">
         <div.text1 style="color:whitesmoke">
@@ -35,15 +38,22 @@
 </div>
 
 <img id="sorry" src="SorryBoard.png">
-
+<img id="Sphirby" src="sphirby.png">
 <script>
     window.onload=function(){
         var canvas=document.getElementById("canvas");
         var context=canvas.getContext("2d");
-        var image=document.getElementById("sorry");
-        context.drawImage(image, 0, 0);
+        var board=document.getElementById("sorry");
+        var kirby1=document.getElementById("sphirby");
+        context.drawImage(board, 0, 0);
+        context.drawImage(Sphirby, 0, 0);
     };
+
 </script>
+
+
+
+
 
 </body>
 </html>
