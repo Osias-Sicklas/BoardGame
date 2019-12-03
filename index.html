@@ -28,7 +28,7 @@
 
 <body>
 
-  
+        
     <style>
         #canvas{border:5px solid blue}
     </style>
@@ -38,13 +38,15 @@
     </div>
     
     <img id="sorry" src="SorryBoard.png">
-    
+    <img id='sphirby' src="sphirby.png" width="50" height=50 >
     <script>
         window.onload=function(){
             var canvas=document.getElementById("canvas");
             var context=canvas.getContext("2d");
-            var image=document.getElementById("sorry");
-            context.drawImage(image, 0, 0);
+            var Board=document.getElementById("sorry");
+            var sphirby=document.getElementById("sphirby")
+            context.drawImage(Board, 0, 0);
+            context.drawImage(sphirby, 0, 0);
         };
 
 </script>
