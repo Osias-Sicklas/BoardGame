@@ -19,15 +19,23 @@
     </head>
 <body>
 
-<style>
-#canvas{border:5px solid blue}
-</style>
-
-<div style="text-align:center">
-<canvas id="canvas" width="850" height="850"></canvas>
-</div> 
-<img src="sphirby.png" width="100"height="100"/>
-<script>
+    <style>
+        #canvas{border:5px solid blue}
+    </style>
+        <img src="sphirby.png" width="100"height="100"/>
+    </div style="text-align:center">
+    <canvas id="canvas" width="699" height="699" style="border:5px solid blue;"></canvas>
+    </div>
+    
+    <img id="sorry" src="SorryBoard.png">
+    
+    <script>
+        window.onload=function(){
+            var canvas=document.getElementById("canvas");
+            var context=canvas.getContext("2d");
+            var image=document.getElementById("sorry");
+            context.drawImage(image, 0, 0);
+        };
 
 </script>
 
