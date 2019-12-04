@@ -19,7 +19,10 @@
     img#sorry{
         display: none;
     }
-    img#Sphirby{
+    img#sphirby{
+        display: none;
+    }
+    img#cardButton{
         display: none;
     }
     </style>
@@ -36,25 +39,43 @@
 <div style="text-align:center;">
     <canvas id="canvas" width="699" height="699" style="border:5px solid blue;"></canvas>
 </div>
+    <!--Draw Card & Dice Button-->
+<div>
+    <button onclick="cardFunction()">Draw Card</button>
+    <button onclick="diceFunction()">Roll Dice</button>
+</div>
 
+
+<img id="sphirby" src="Pokemon Pink/sphirby.png">
 <img id="sorry" src="SorryBoard.png">
-<img id="Sphirby" src="sphirby.png">
+<img id=cardButton src="1.png" alt="card Button">
 <script>
-    window.onload=function(){
+    onload=function(){
         var canvas=document.getElementById("canvas");
         var context=canvas.getContext("2d");
         var board=document.getElementById("sorry");
         var kirby1=document.getElementById("sphirby");
         context.drawImage(board, 0, 0);
-        context.drawImage(Sphirby, 0, 0);
+        context.drawImage(sphirby, 0, 0);
+        context.drawImage(cardButton, 250, 250);
     };
 
 </script>
+<!--Card Button Test-->
+ <script>
+     //Change the Alert to work with drawing cards and other functions.
+ function cardFunction(){
+alert(Math.floor((Math.random()*12)+1));
+ };
+
+function diceFunction(){
+alert(Math.floor((Math.random()*6)+1));
+};
+
+ </script>
 
 
-
-
+<!--REMOVE THE SORRY CARD?-->
 
 </body>
-</html>
 </html>
