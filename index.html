@@ -64,13 +64,18 @@
 <!--Card Button Test-->
  <script>
      //Change the Alert to work with drawing cards and other functions.
- function cardFunction(){
-alert(Math.floor((Math.random()*12)+1));
- };
-
-function diceFunction(){
+ function diceFunction(){
 alert(Math.floor((Math.random()*6)+1));
+ };
+    //Not done correctly. Fix.
+function cardFunction(){
+        var num=(Math.floor((Math.random()*12)+1));
+    if (num === 1){
+        context.drawImage(sphirby, 50, 0);
+    }
 };
+
+
 
  </script>
 
