@@ -71,7 +71,13 @@ alert(Math.floor((Math.random()*6)+1));
 function cardFunction(){
         var num=(Math.floor((Math.random()*12)+1));
     if (num === 1){
+        var canvas=document.getElementById("canvas");
+        var context=canvas.getContext("2d");
+        var board=document.getElementById("sorry");
+        var kirby1=document.getElementById("sphirby");
+        context.drawImage(board, 0, 0);
         context.drawImage(sphirby, 50, 0);
+        context.drawImage(cardButton, 250, 250);
     }
 };
 
