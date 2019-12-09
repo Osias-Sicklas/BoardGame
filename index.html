@@ -20,6 +20,15 @@
         img#sphirby{
         display: none;
     }
+        img#Kengar{
+            display: none;
+        }
+        img#Kloom{
+            display: none;
+        }
+        img#Girby{
+            display:none;
+        }
     </style>
     <text1 style="text-align:center">
     <div.text1 style="color:whitesmoke">
@@ -27,7 +36,10 @@
         <h1> 
         <a href="Rule set from Wikipedia.pdf" style="color:yellowgreen">Read the rules here!</a></h1>
     <img id="sorry" src="SorryBoard.png">
-    <img id='sphirby' src="sphirby.png" width="50" height=50 > 
+    <img id='sphirby' src="sphirby.png"> 
+    <img id='Kengar' src="Kengar.png">
+    <img id="Kloom" src="Kloom.png">
+    <img id="Girby" src="Girby.png">
     <div style="text-align:center;">
         <canvas id="canvas" width="699" height="699" style="border:5px solid blue;"></canvas>
     </div>
@@ -38,8 +50,14 @@
             var context=canvas.getContext("2d");
             var Board=document.getElementById("sorry");
             var sphirby=document.getElementById("sphirby")
+            var Kengar=document.getElementById("Kengar")
+            var Kloom=document.getElementById('Kloom')
+            var Girby=document.getElementById('Girby')
             context.drawImage(Board, 0, 0);
-            context.drawImage(sphirby, 0, 0);
+            context.drawImage(sphirby, 650, 0);
+            context.drawImage(Kengar, 0, 650);
+            context.drawImage(Kloom, 650, 650);
+            context.drawImage(Girby, 0, 0);
         };
 
 </script>
