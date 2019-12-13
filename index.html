@@ -13,7 +13,8 @@
         background-color: darkslateblue;
     }
 </style>
-
+    <!--Title-->
+<title>Sorry!</title>
     <!--Header1-->
 <text1 style="text-align:center">
     <div.text1 style="color:whitesmoke">
@@ -25,15 +26,131 @@
     </a>
 </h1>
     <!--Board-->
-    <div id="1" style="left:580px; top:100px; position:absolute;">
-<p><img src="SorryBoard.png"></p>
+    <div id="board">
+        <div id="div1" ondrop="end(event)" ondragover="drop(event)">
+            <img src="pink/sphirby.png" draggable="true" ondragstart="drag(event)" id="drag1" width="30" height="30">
+          </div>
+          
+          <div id="div2" ondrop="end(event)" ondragover="drop(event)"></div>
+          
+          <div id="div3" ondrop="end(event)" ondragover="drop(event)"></div>
+          
+          <div id="div4" ondrop="end(event)" ondragover="drop(event)"></div>
+          
+          <div id="div5" ondrop="end(event)" ondragover="drop(event)"></div>
+          
+          <div id="div6" ondrop="end(event)" ondragover="drop(event)"></div>
+          
+          <div id="div7" ondrop="end(event)" ondragover="drop(event)"></div>
+          
+          <div id="div8" ondrop="end(event)" ondragover="drop(event)"></div>
+          
+          <div id="div9" ondrop="end(event)" ondragover="drop(event)"></div>
+          
+          <div id="div10" ondrop="end(event)" ondragover="drop(event)"></div>
+          
+          <div id="div11" ondrop="end(event)" ondragover="drop(event)"></div>
+          
+          <div id="div12" ondrop="end(event)" ondragover="drop(event)"></div>
+          
+          <div id="div13" ondrop="end(event)" ondragover="drop(event)"></div>
+          
+          <div id="div14" ondrop="end(event)" ondragover="drop(event)"></div>
+          
+          <div id="div15" ondrop="end(event)" ondragover="drop(event)"></div>
+          
+          <div id="div16" ondrop="end(event)" ondragover="drop(event)"></div>
     </div>
 
-    <div id="2" style="left:578px; top:116px; position:absolute;">
-            <img src="pink/sphirby.png">
-    </div>
+    <!--Drag and Drop-->
+    <style>
+       #board {
+            position: relative;
+            height: 694px;
+            width: 694px;
+            background-image: url('SorryBoard.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin: 0 auto;
+        }
+
+        #board img {
+            position: relative;
+            z-index: 1;
+        }
+
+        #div1 {
+          float: left;
+          width: 24px;
+          height: 24px;
+          margin: 0px;
+          padding: 10px;
+          border: 1px solid black;
+          position: absolute;
+          z-index: 2;
+            top:0;
+            left:0;
+        }
+
+        #div2 {
+          float: left;
+          width: 24px;
+          height: 24px;
+          margin: 0px;
+          padding: 7px;
+          border: 3px solid black;
+          position: absolute;
+          z-index: 2;
+            top:0;
+            left:42px;
+        }
+
+        #div3 {
+          float: left;
+          width: 24px;
+          height: 24px;
+          margin: 0px;
+          padding: 7px;
+          border: 3px solid black;
+          position: absolute;
+          z-index: 2;
+            top:0;
+            left:85px;
+        }
+
+        #div4 {
+          float: left;
+          width: 24px;
+          height: 24px;
+          margin: 0px;
+          padding: 7px;
+          border: 3px solid black;
+          position: absolute;
+          z-index: 2;
+            top:0;
+            left:128px;
+        }
+    </style>
+
+<!--Make an #Div for each box. Change the top number to match where it should be located at on the board.-->
 
 
+<script>
+    function drop(ev) {
+      ev.preventDefault();
+    }
+    
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+    
+    function end(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+    }
+    </script>
+<!--End of D&D-->
 
 </body>
 </html>
