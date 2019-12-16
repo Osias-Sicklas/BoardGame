@@ -28,13 +28,14 @@
 
     <!--Card Canvas-->
     <div style="text-align:center; float:right; margin:150px">
-        <canvas id="canvas" width="239" height="366" style="border:5px solid blue;"></canvas>
+        <canvas id="canvas" width="237" height="362" style="border:5px solid blue;"></canvas>
     </div>
 
     <!--Board-->
     <div id="board">
         <div id="div1" ondrop="end(event)" ondragover="drop(event)">
-            <img src="pink/sphirby.png" draggable="true" ondragstart="drag(event)" id="drag1" width="30" height="30">
+          <img src="pink/sphirby.png" draggable="true" ondragstart="drag(event)" id="drag1" width="30" height="30">
+          <img src="pink/kloom.png" draggable="true" ondragstart="drag(event)" id="drag2" width="30" height="30">
           </div>
           
           <div id="div2" ondrop="end(event)" ondragover="drop(event)"></div>
@@ -984,28 +985,170 @@
         img#card1{
             display: none;
         }
+
+        img#card2{
+            display: none;
+        }
+
+        img#card3{
+            display: none;
+        }
+
+        img#card4{
+            display: none;
+        }
+
+        img#card5{
+            display: none;
+        }
+
+        img#card7{
+            display: none;
+        }
+
+        img#card8{
+            display: none;
+        }
+
+        img#card10{
+            display: none;
+        }
+
+        img#card11{
+            display: none;
+        }
+
+        img#card12{
+            display: none;
+        }
+
+        img#dice{
+            display: none;
+        }
+
+        img#sorry{
+            display: none;
+        }
     </style>
 
     <!--Card Images-->
 <img id="card1" src="cards/1.png">
+
+<img id="card2" src="cards/2.png">
+
+<img id="card3" src="cards/3.png">
+
+<img id="card4" src="cards/4.png">
+
+<img id="card5" src="cards/5.png">
+
+<img id="card7" src="cards/7.png">
+
+<img id="card8" src="cards/8.png">
+
+<img id="card10" src="cards/10.png">
+
+<img id="card11" src="cards/11.png">
+
+<img id="card12" src="cards/12.png">
+
+<img id="dice" src="cards/Dice.png">
+
+<img id="sorry" src="cards/Sorry.png">
 
     <!--Cards&Dice-->
 <script>
     function diceFunction(){
       alert(Math.floor((Math.Random()*6)+1));
  };
-    //Try using a canvas to add the image ^_^ 
-    //Still needs working on :(
+
     function cardFunction(){
         var num=(Math.floor((Math.random()*12)+1));
-        alert(num)
       if(num === 1){
         var canvas=document.getElementById("canvas");
         var context=canvas.getContext("2d");
-        var card1=document.getElementById("1.png");
+        var card1=document.getElementById("card1");
         context.drawImage(card1, 0, 0);
+      };
+
+      if(num === 2){
+        var canvas=document.getElementById("canvas");
+        var context=canvas.getContext("2d");
+        var card2=document.getElementById("card2");
+        context.drawImage(card2, 0, 0);
+      };
       
-      }
+      if(num === 3){
+        var canvas=document.getElementById("canvas");
+        var context=canvas.getContext("2d");
+        var card3=document.getElementById("card3");
+        context.drawImage(card3, 0, 0);
+      };
+
+      if(num === 4){
+        var canvas=document.getElementById("canvas");
+        var context=canvas.getContext("2d");
+        var card4=document.getElementById("card4");
+        context.drawImage(card4, 0, 0);
+      };
+
+      if(num === 5){
+        var canvas=document.getElementById("canvas");
+        var context=canvas.getContext("2d");
+        var card5=document.getElementById("card5");
+        context.drawImage(card5, 0, 0);
+      };
+
+      if(num === 7){
+        var canvas=document.getElementById("canvas");
+        var context=canvas.getContext("2d");
+        var card7=document.getElementById("card7");
+        context.drawImage(card7, 0, 0);
+      };
+
+      if(num === 8){
+        var canvas=document.getElementById("canvas");
+        var context=canvas.getContext("2d");
+        var card8=document.getElementById("card8");
+        context.drawImage(card8, 0, 0);
+      };
+
+      if(num === 10){
+        var canvas=document.getElementById("canvas");
+        var context=canvas.getContext("2d");
+        var card10=document.getElementById("card10");
+        context.drawImage(card10, 0, 0);
+      };
+
+      if(num === 11){
+        var canvas=document.getElementById("canvas");
+        var context=canvas.getContext("2d");
+        var card11=document.getElementById("card11");
+        context.drawImage(card11, 0, 0);
+      };
+
+      if(num === 12){
+        var canvas=document.getElementById("canvas");
+        var context=canvas.getContext("2d");
+        var card12=document.getElementById("card12");
+        context.drawImage(card12, 0, 0);
+      };
+
+      //Sorry Card
+      if(num === 6){
+        var canvas=document.getElementById("canvas");
+        var context=canvas.getContext("2d");
+        var sorry=document.getElementById("sorry");
+        context.drawImage(sorry, 0, 0);
+      };
+
+      //Dice Card
+      if(num === 9){
+        var canvas=document.getElementById("canvas");
+        var context=canvas.getContext("2d");
+        var dice=document.getElementById("dice");
+        context.drawImage(dice, 0, 0);
+      };
     };
 </script>
     <!--End of Cards&Dice-->
