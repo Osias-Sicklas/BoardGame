@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <!--Title-->
+    <title>Sorry!</title>
 </head>
 <body>
     <!--Background Color-->
@@ -13,8 +14,6 @@
         background-color: darkslateblue;
     }
 </style>
-    <!--Title-->
-<title>Sorry!</title>
     <!--Header1-->
 <text1 style="text-align:center">
     <div.text1 style="color:whitesmoke">
@@ -1029,6 +1028,30 @@
         img#sorry{
             display: none;
         }
+
+        img#dice1{
+            display: none;
+        }
+
+        img#dice2{
+            display: none;
+        }
+
+        img#dice3{
+            display: none;
+        }
+
+        img#dice4{
+            display: none;
+        }
+
+        img#dice5{
+            display: none;
+        }
+
+        img#dice6{
+            display: none;
+        }
     </style>
 
     <!--Card Images-->
@@ -1055,12 +1078,69 @@
 <img id="dice" src="cards/Dice.png">
 
 <img id="sorry" src="cards/Sorry.png">
+    <!--End of Card Images-->
+
+    <!--Dice Images-->
+<img id="dice1" src="dice/dice1.png">
+
+<img id="dice2" src="dice/dice2.png">
+
+<img id="dice3" src="dice/dice3.png">
+
+<img id="dice4" src="dice/dice4.png">
+
+<img id="dice5" src="dice/dice5.png">
+
+<img id="dice6" src="dice/dice6.png">
+    <!--End of Dice Images-->
 
     <!--Cards&Dice-->
 <script>
     function diceFunction(){
-     alert(Math.floor((Math.random()*12)+1));
- };
+     var numb=(Math.floor((Math.random()*6)+1));
+      if(numb === 1){
+        var canvas=document.getElementById("canvas");
+        var context=canvas.getContext("2d");
+        var card1=document.getElementById("dice1");
+        context.drawImage(dice1, 0, 0);
+      };
+
+      if(numb === 2){
+        var canvas=document.getElementById("canvas");
+        var context=canvas.getContext("2d");
+        var card1=document.getElementById("dice2");
+        context.drawImage(dice2, 0, 0);
+      };
+
+      if(numb === 3){
+        var canvas=document.getElementById("canvas");
+        var context=canvas.getContext("2d");
+        var card1=document.getElementById("dice3");
+        context.drawImage(dice3, 0, 0);
+      };
+
+      if(numb === 4){
+        var canvas=document.getElementById("canvas");
+        var context=canvas.getContext("2d");
+        var card1=document.getElementById("dice4");
+        context.drawImage(dice4, 0, 0);
+      };
+
+      if(numb === 5){
+        var canvas=document.getElementById("canvas");
+        var context=canvas.getContext("2d");
+        var card1=document.getElementById("dice5");
+        context.drawImage(dice5, 0, 0);
+      };
+
+      if(numb === 6){
+        var canvas=document.getElementById("canvas");
+        var context=canvas.getContext("2d");
+        var card1=document.getElementById("dice6");
+        context.drawImage(dice6, 0, 0);
+      };
+    };
+
 
     function cardFunction(){
         var num=(Math.floor((Math.random()*12)+1));
@@ -1152,5 +1232,7 @@
     };
 </script>
     <!--End of Cards&Dice-->
+
+
 </body>
 </html>
